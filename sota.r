@@ -1,0 +1,10 @@
+
+library(clValid)
+mymatrix=read.csv("matrix.csv", header=TRUE)
+sotaCl <- sota(as.matrix(mymatrix), 29)
+plot(sotaCl, cl=6)
+distan2=dist(NW.dis)
+dunn2=dunn(distan2,sotaC1$clust,method = "euclidean")
+sink("C:\\ws\\sota-clusters.txt")
+lapply(sotaC2$clust,print)
+sink()
